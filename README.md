@@ -19,7 +19,7 @@ Maximum sealing time will happen when deals come in as the first to start a publ
 
 ### Deal acceptance parameters
 - min. deal size: 256B (verified deals needs to be minimum 1MiB)
-- max. deal size: 32GiB
+- max. deal size: 512MiB
 - unverified price per GiB: 0.0000000005 FIL
 - verified price per GiB: 0 FIL
 - accept online storage deals: yes
@@ -32,7 +32,7 @@ Maximum sealing time will happen when deals come in as the first to start a publ
 - Price / epoch / Gib	500,000,000 atto
 - Verified Price / epoch / Gib	0 atto
 - Min Piece Size	256 B
-- Max Piece Size	32 GiB
+- Max Piece Size	512 MiB
 #### Deal publish
 - Deal publish period	1h
 #### Boost config.toml configuration
