@@ -87,3 +87,41 @@ Maximum sealing time will happen when deals come in as the first to start a publ
   BatchPreCommits = false
   AggregateCommits = false
 ```
+
+
+## DEAL EXAMPLES
+
+### Client side (Using boost):
+FAKE DEALS (BOOST)
+#### 1. Make a random name and file. Here it's a 32GiB file
+```
+UUID=`uuidgen | awk -F"-" '{print $1}'`
+dd if=/dev/urandom of=$UUID.deal bs=1K count=32317564
+```
+#### 2. Make a car of the file
+```
+boostx generate-car ./$UUID.deal ./$UUID.car
+Payload CID:  bafyreibdo6167w27ok4r4nxapiuqy4kt4xz2v6ashhlpmtkqzayj4b5w4
+```
+#### 3. Then you need to calculate the commp and piece size for the generated car file:
+```
+boostx commp ./$UUID.car
+  CommP CID:  baga6ea4seaqlulkipc|sbgopuqe7afpe7|gdkooaudctsmdcuz6ovgc6xvrkong
+  Piece size:  34359738368
+  Car file size: 33317564668 
+```
+#### 4. Place the generated car file on a public HTTP server, so that a storage provider can later fetch it.
+#### 5. Finally, trigger an online storage deal with a given storage provider:
+```
+boost deal --verified=false \
+           --provider=t017840 \
+           --commp=baga6ea4seaqlulkipc|sbgopuqe7afpe7|gdkooaudctsmdcuz6ovgc6xvrkong \
+           --http-url=https://some_http_server/Your_UUID_file.car \
+           --car-size=33317564668 \
+           --duration=600001 \
+           --storage-price=500000000 \
+           --piece-size=34359738368 \
+           --payload-cid=bafyreibdo6167w27ok4r4nxapiuqy4kt4xz2v6ashhlpmtkqzayj4b5w4
+```
+#### 6. Deal accepted in Boost
+![image](https://github.com/benjaminh83/fvm-calib-deal-miners/assets/14029124/38ddb01f-2d0f-4220-af27-93822124eabb)
