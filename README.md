@@ -13,7 +13,7 @@ Maximum sealing time will happen when deals come in as the first to start a publ
   **Users should expect time to get deals on chain to be up to 19h, so deals should be issued with a minimum 24h to deal start epoch (Current epoch + 2880).**
   
 ### On chain published address and peer ID
-`/ip4/194.182.34.236/tcp/10241`
+`/ip4/38.70.220.87/tcp/10241`
 
 `12D3KooWQtcfpAhnu89D3YkyA1ZVXmDBmCLwA62LEfHinfLcHzoL`
 
@@ -28,6 +28,40 @@ Maximum sealing time will happen when deals come in as the first to start a publ
 - accept offline retrieval deals: no
 
 ### Configurations parameters
+#### libp2p-info
+```
+Provider: t017840
+Agent: boost-1.7.4+git.52cb7cd
+Peer ID: 12D3KooWQtcfpAhnu89D3YkyA1ZVXmDBmCLwA62LEfHinfLcHzoL
+Peer Addresses:
+  /ip4/38.70.220.87/tcp/10241
+Protocols:
+  /fil/datatransfer/1.2.0
+  /fil/retrieval/qry/0.0.1
+  /fil/retrieval/qry/1.0.0
+  /fil/retrieval/transports/1.0.0
+  /fil/storage/ask/1.0.1
+  /fil/storage/ask/1.1.0
+  /fil/storage/mk/1.0.1
+  /fil/storage/mk/1.1.0
+  /fil/storage/mk/1.1.1
+  /fil/storage/mk/1.2.0
+  /fil/storage/mk/1.2.1
+  /fil/storage/status/1.0.1
+  /fil/storage/status/1.1.0
+  /fil/storage/status/1.2.0
+  /floodsub/1.0.0
+  /ipfs/graphsync/1.0.0
+  /ipfs/graphsync/2.0.0
+  /ipfs/id/1.0.0
+  /ipfs/id/push/1.0.0
+  /ipfs/ping/1.0.0
+  /legs/head/indexer/ingest/mainnet/0.0.1
+  /libp2p/autonat/1.0.0
+  /libp2p/balancer/forwarding/0.0.1
+  /meshsub/1.0.0
+  /meshsub/1.1.0
+```
 #### Storage Ask
 - Price / epoch / Gib	500,000,000 atto
 - Verified Price / epoch / Gib	0 atto
@@ -38,7 +72,7 @@ Maximum sealing time will happen when deals come in as the first to start a publ
 #### Boost config.toml configuration
 ```
 [Libp2p]
-  AnnounceAddresses = ["/ip4/194.182.34.236/tcp/10241"]
+  AnnounceAddresses = ["/ip4/38.70.220.87/tcp/10241"]
 [Dealmaking]
   ConsiderOnlineStorageDeals = true
   ConsiderOfflineStorageDeals = false
