@@ -11,6 +11,8 @@ Maximum sealing time will happen when deals come in as the first to start a publ
 3. Sealing takes around 6h to complete 
 
   **Users should expect time to get deals on chain to be up to 19h, so deals should be issued with a minimum 24h to deal start epoch (Current epoch + 2880).**
+
+  **Looking Glass** - http://38.70.220.87:8123/ - This service shows the SP's Boost logs, so you can check on deal proposal status without having to wait 12h+. Filter by client ID.
   
 ### On chain published address and peer ID
 `/ip4/38.70.220.87/tcp/10241`
