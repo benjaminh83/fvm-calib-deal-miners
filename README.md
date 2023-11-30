@@ -13,6 +13,8 @@ Maximum sealing time will happen when deals come in as the first to start a publ
   **Users should expect time to get deals on chain to be up to 19h, so deals should be issued with a minimum 24h to deal start epoch (Current epoch + 2880).**
 
   **Looking Glass** - http://38.70.220.87:8123/ - This service shows the SP's Boost logs, so you can check on deal proposal status without having to wait 12h+. Filter by client ID.
+
+  **Filecoin.tools** - https://calibration.filecoin.tools/t017840 - This service shows storage deal status after proposals have been accepted. Also provides an [API](https://filecoin.tools/docs).
   
 ### On chain published address and peer ID
 `/ip4/38.70.220.87/tcp/10241`
